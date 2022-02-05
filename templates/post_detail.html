@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/post.css'%}">
+</head>
+
+
+
+{% block content %}
+            <nav>
+                <a href="{% url 'home' %}">Go Home</a>
+            </nav>
+
+            <div class="post-entry">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.body }}</p>
+            </div>
+{% endblock content%}
